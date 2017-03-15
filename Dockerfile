@@ -35,4 +35,5 @@ RUN install mongodb.conf /etc
 VOLUME /data/db
 
 EXPOSE 27017
+CMD ["sudo -u mongodb mongod --repair --dbpath /var/lib/mongodb/"]
 CMD ["/opt/mongodb/bin/mongod"]
